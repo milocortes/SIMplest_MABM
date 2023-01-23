@@ -1,0 +1,5 @@
+/src/rust_simplest_abm/target/debug/build
+/src/rust_simplest_abm/target/debug/deps
+/src/rust_simplest_abm/target/debug/examples
+/src/rust_simplest_abm/target/debug/incremental
+/src/rust_simplest_abm/target/debug/.fingerprint

@@ -1,0 +1,1 @@
+/home/milo/Documents/Rust/ABM/github_comparativo/src/rust_simplest_abm/target/debug/rust_simplest_abm: /home/milo/Documents/Rust/ABM/github_comparativo/src/rust_simplest_abm/src/agents.rs /home/milo/Documents/Rust/ABM/github_comparativo/src/rust_simplest_abm/src/main.rs
