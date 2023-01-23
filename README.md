@@ -66,6 +66,7 @@ Comparamos las ejecuciones de modelo en Python y Rust para las siguientes cuatro
 ## Resultados 
 
 Para las 4 pruebas realizadas, la implementación en Rust es entre 14 y 16 veces más rápida que la implementación en Python.
+
 ![](images/tiempo_ejec_rust_python.png)
 
 Las siguientes figuras muestran la tasa de desempleo estimada para cada implementación.
