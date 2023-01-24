@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Rust es un lenguaje de programación creado en 2010 por Mozilla. El lenguaje brinda seguridad de la memoria sin la necesidad de incorpora un recolector de basura. En septiembre de 2022, la versión 6.1 del kernel de Linux incorporó a Rust para escribir componentes del kernel.
+Rust es un lenguaje de programación creado en 2010 por Mozilla. El lenguaje brinda seguridad de la memoria sin la necesidad de incorpora un recolector de basura. Esto es producto de la introducción del concepto de *borrow checker* que verifica que los accesos a datos son legales, lo que le permite a Rust prevenir problemas de seguridad sin imponer costos durante el tiempo de ejecución [(McNara, 2021)](https://www.manning.com/books/rust-in-action). A su vez, *borrow checker* se basa en tres conceptos interrelacionados : *lifetimes*, *ownership* y *borrowing*.  En septiembre de 2022, la versión 6.1 del kernel de Linux incorporó a Rust para escribir componentes del kernel.
 
 Si bien Rust es utilizado principalmente para System Programming, en la academia comienza a utilizarse el lenguaje como alternativa a C y C++ ([ver](https://www.nature.com/articles/d41586-020-03382-2)).
 
