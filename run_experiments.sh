@@ -19,6 +19,13 @@ for i in  $(seq 0 $n_experimentos); do
     output_time_python="$( TIMEFORMAT='%R,%U,%S,%P';time (python src/python_simplest_abm/main_simplest_abm.py $n ${n_houses[$i]} ${n_firms[$i]} ${g_pub[$i]}) 2>&1 1>/dev/null)"
     echo $output_time_python 
 
+
+    ## Ejecuta modelo en C++ y guarda el tiempo de ejecución
+    echo "C++"
+    output_time_cpp="$( TIMEFORMAT='%R,%U,%S,%P';time ( ./src/cpp_simplest_abm/main $n ${n_houses[$i]} ${n_firms[$i]} ${g_pub[$i]}) 2>&1 1>/dev/null )"
+
+    echo $output_time_cpp
+
     ## Ejecuta modelo en Rust y guarda el tiempo de ejecución
     echo "Rust"
     output_time_rust="$( TIMEFORMAT='%R,%U,%S,%P';time ( ./src/rust_simplest_abm/target/debug/rust_simplest_abm $n ${n_houses[$i]} ${n_firms[$i]} ${g_pub[$i]}) 2>&1 1>/dev/null )"
@@ -29,6 +36,7 @@ for i in  $(seq 0 $n_experimentos); do
 
     echo "$i,$n,${n_houses[$i]},${n_firms[$i]},${g_pub[$i]},python,$output_time_python">>output_time.txt 
     echo "$i,$n,${n_houses[$i]},${n_firms[$i]},${g_pub[$i]},rust,$output_time_rust">>output_time.txt 
+    echo "$i,$n,${n_houses[$i]},${n_firms[$i]},${g_pub[$i]},cpp,$output_time_cpp">>output_time.txt 
 
     done
 done

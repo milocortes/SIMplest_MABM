@@ -6,7 +6,7 @@ Rust es un lenguaje de programación creado en 2010 por Mozilla. El lenguaje bri
 
 Si bien Rust es utilizado principalmente para System Programming, en la academia comienza a utilizarse el lenguaje como alternativa a C y C++ ([ver](https://www.nature.com/articles/d41586-020-03382-2)).
 
-En esta implementación se realiza un comparativo entre tiempos de ejecución de un Modelo Macroeconómico Basado en Agentes propuesto por [Alessandro Caiani](https://sites.google.com/view/alessandro-caiani/teaching#h.p_NCwo3LmKcTZs) ("the SIMplest model"). Dicho modelo es desarrollado en Python, C++ y Rust. Se evaluan los tiempos de ejecución de las implementaciones con distintas cargas de trabajo.
+En esta implementación se realiza un comparativo entre tiempos de ejecución de un Modelo Macroeconómico Basado en Agentes propuesto por [Alessandro Caiani](https://sites.google.com/view/alessandro-caiani/teaching#h.p_NCwo3LmKcTZs) ("the SIMplest model"). Dicho modelo es desarrollado en Python y Rust. Se evaluan los tiempos de ejecución de ambas implementaciones con distintas cargas de trabajo.
 
 ## Modelo
 
@@ -65,7 +65,7 @@ Comparamos las ejecuciones de modelo en Python y Rust para las siguientes cuatro
 
 ## Resultados 
 
-Para las 4 pruebas realizadas, la implementación en Rust es entre 14 y 16 veces más rápida que la implementación en Python, mientras que C++ es entre 1.9 y 2.6 veces más rápido que Rust.
+Para las 4 pruebas realizadas, la implementación en Rust es entre 15 y 19 veces más rápida que la implementación en Python, mientras que C++ es entre 1.8 y 2.5 veces más rápido que Rust.
 
 ![](images/tiempo_ejec_rust_python.png)
 
@@ -73,21 +73,19 @@ La siguiente tabla presenta el tiempo en segundos de cada implementación.
 
 | Tipo de experimento   |       C++ |   Python |     Rust |
 |:----------------|----------:|---------:|---------:|
-| Prueba 1        | 0.0573333 |  1.60367 | 0.110238 |
-| Prueba 2        | 0.292381  |  7.60152 | 0.451762 |
-| Prueba 3        | 0.659905  | 19.9071  | 1.17271  |
-| Prueba 4        | 1.48205   | 60.2753  | 3.88514  |
-
+| Prueba 1        | 0.0598095 |  2.2239  | 0.112571 |
+| Prueba 2        | 0.324143  |  7.81229 | 0.466905 |
+| Prueba 3        | 0.677048  | 19.9872  | 1.25238  |
+| Prueba 4        | 1.52605   | 59.5015  | 3.81476  |
 
 Por su parte, la siguiente tabla presenta la razón de tiempo de ejecución de C++ y Rust vs Python.
 
-| Tipo de Experimento   |     C++ |    Rust |
+| Tipo de experimento   |     C++ |    Rust |
 |:----------------|--------:|--------:|
-| Prueba 1        | 27.9709 | 14.5473 |
-| Prueba 2        | 25.9987 | 16.8264 |
-| Prueba 3        | 30.1666 | 16.9752 |
-| Prueba 4        | 40.6703 | 15.5143 |
-
+| Prueba 1        | 37.1831 | 19.7555 |
+| Prueba 2        | 24.1014 | 16.7321 |
+| Prueba 3        | 29.5211 | 15.9594 |
+| Prueba 4        | 38.9906 | 15.5977 |
 
 Las siguientes figuras muestran la tasa de desempleo estimada para cada implementación.
 
